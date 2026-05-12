@@ -6,3 +6,4 @@ scikit-learn
 ta
 yfinance
 requests
+tensorflow 
