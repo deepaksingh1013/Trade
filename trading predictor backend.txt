@@ -1,0 +1,77 @@
+trading_predictor/
+├── backend/
+│   ├── data/
+│   │   ├── collectors/
+│   │   │   ├── yahoo_collector.py      # Free Yahoo Finance data
+│   │   │   ├── news_collector.py       # Free news scraping
+│   │   │   └── reddit_collector.py     # Reddit sentiment
+│   │   ├── processors/
+│   │   │   ├── technical_indicators.py (done)
+│   │   │   ├── sentiment_analyzer.py
+│   │   │   └── feature_engineer.py
+│   │   └── storage/
+│   │       ├── database.py (done)
+│   │       └── models.py
+│   ├── ml/
+│   │   ├── models/
+│   │   │   ├── ensemble_model.py
+│   │   │   ├── lstm_model.py
+│   │   │   └── xgboost_model.py
+│   │   ├── training/
+│   │   │   ├── trainer.py
+│   │   │   └── validator.py
+│   │   └── prediction/
+│   │       ├── predictor.py (done)
+│   │       └── signal_generator.py
+│   ├── api/
+│   │   ├── main.py (done)                     # FastAPI server
+│   │   ├── routes/
+│   │   │   ├── predictions.py (done)
+│   │   │   ├── data.py (done)
+│   │   │   └── backtest.py
+│   │   └── websockets/
+│   │       └── live_data.py
+│   ├── utils/
+│   │   ├── config.py
+│   │   ├── logger.py
+│   │   └── helpers.py
+│   ├── requirements.txt
+│   └── run.py (done)
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── Dashboard/
+│   │   │   │   ├── Dashboard.js (done)
+│   │   │   │   ├── TradingChart.js (done)
+│   │   │   │   ├── PredictionPanel.js (done)
+│   │   │   │   └── SignalsList.js (done)
+│   │   │   ├── Backtest/
+│   │   │   │   ├── BacktestPanel.js (done)
+│   │   │   │   └── PerformanceMetrics.js
+│   │   │   └── common/
+│   │   │       ├── Header.js
+│   │   │       └── Loading.js
+│   │   ├── services/
+│   │   │   ├── api.js (done)
+│   │   │   └── websocket.js
+│   │   ├── hooks/
+│   │   │   ├── useWebSocket.js (done)
+│   │   │   └── usePredictions.js (done)
+│   │   ├── utils/
+│   │   │   └── helpers.js (done)
+│   │   ├── App.js (done)
+│   │   └── index.js
+│   ├── package.json (done)
+│   └── public/
+├── data/
+│   ├── raw/              # Raw downloaded data
+│   ├── processed/        # Cleaned data
+│   └── models/           # Trained ML models
+├── scripts/
+│   ├── setup_database.py
+│   ├── initial_data_download.py
+│   └── train_models.py
+├── tests/
+├── docker-compose.yml    # For easy PostgreSQL setup
+├── README.md
+└── .gitignore

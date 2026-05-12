@@ -1,0 +1,106 @@
+trading_predictor/
+│
+├── 📂 backend/                           # Python FastAPI Backend
+│   ├── 📂 venv/                         # Python virtual environment (auto-created)
+│   ├── 📂 data/                         # Data processing modules
+│   │   ├── 📂 collectors/               # Data collection modules
+│   │   │   ├── __init__.py (done)  
+│   │   │   ├── yahoo_collector.py   (done)      # Yahoo Finance data collector
+│   │   │   └── news_collector.py     (done)     # News & sentiment collector
+│   │   ├── 📂 processors/               # Data processing modules
+│   │   │   ├── __init__.py (done)  
+│   │   │   └── technical_indicators.py (done)   # Technical indicators calculator
+│   │   └── 📂 storage/                  # Database and storage
+│   │       ├── __init__.py
+│   │       └── database.py              # Database models and connections
+│   ├── 📂 ml/                           # Machine Learning modules
+│   │   ├── 📂 models/                   # ML model definitions
+│   │   │   └── __init__.py (done)  
+│   │   ├── 📂 training/                 # Model training scripts
+│   │   │   └── __init__.py (done)  
+│   │   └── 📂 prediction/               # Prediction engine
+│   │       ├── __init__.py (done)  
+│   │       └── predictor.py    (done)           # Main ML predictor
+│   ├── 📂 api/                          # API endpoints
+│   │   ├── 📂 routes/                   # API route definitions
+│   │   │   ├── __init__.py
+│   │   │   ├── predictions.py           # Prediction endpoints
+│   │   │   ├── data.py                  # Market data endpoints
+│   │   │   └── news.py                  # News endpoints
+│   │   └── __init__.py
+│   ├── 📂 utils/                        # Utility modules
+│   │   ├── __init__.py (done)  
+│   │   ├── config.py      (done)                # Configuration settings
+│   │   └── logger.py       (done)               # Logging setup
+│   ├── 📂 logs/                         # Log files (auto-created)
+│   ├── 📄 main.py    (done)                   # Main FastAPI application
+│   ├── 📄 run.py       (done)                   # Server startup script
+│   ├── 📄 database.py                   # Database setup
+│   ├── 📄 startup.py                    # Startup tasks
+│   ├── 📄 websocket_handler.py          # WebSocket management
+│   ├── 📄 requirements.txt  (done)            # Python dependencies
+│   ├── 📄 .env          (done)                # Environment variables
+│   └── 📄 complete_setup.py             # Setup automation script
+│
+├── 📂 frontend/                          # React Frontend
+│   ├── 📂 node_modules/                 # Node.js dependencies (auto-created)
+│   ├── 📂 public/                       # Public static files
+│   │   ├── 📄 index.html                # Main HTML template
+│   │   ├── 📄 favicon.ico               # Website icon
+│   │   └── 📄 manifest.json             # PWA manifest
+│   ├── 📂 src/                          # Source code
+│   │   ├── 📂 components/               # React components
+│   │   │   ├── 📂 Dashboard/            # Dashboard components
+│   │   │   │   ├── 📄 Dashboard.js    (done)    # Main dashboard
+│   │   │   │   ├── 📄 TradingChart.js  (done)   # Price charts
+│   │   │   │   ├── 📄 PredictionPanel.js   (done)   # AI predictions display
+│   │   │   │   └── 📄 SignalsList.js       (done)    # Trading signals list
+│   │   │   ├── 📂 Backtest/             # Backtesting components
+│   │   │   │   └── 📄 BacktestPanel.js (done)   # Backtesting interface
+│   │   │   └── 📂 common/               # Shared components
+│   │   │       ├── 📄 Header.js   (done)        # App header
+│   │   │       └── 📄 Loading.js    (done)      # Loading spinner
+│   │   ├── 📂 services/                 # API services
+│   │   │   └── 📄 api.js  (done)                # API client
+│   │   ├── 📂 hooks/                    # Custom React hooks
+│   │   │   ├── 📄 useWebSocket.js   (done)      # WebSocket hook
+│   │   │   └── 📄 usePredictions.js     # Predictions hook
+│   │   ├── 📂 utils/                    # Utility functions
+│   │   │   └── 📄 helpers.js    (done)          # Helper functions
+│   │   ├── 📄 App.js                    # Main React application
+│   │   ├── 📄 index.js                  # React entry point
+│   │   └── 📄 index.css                 # Global styles
+│   ├── 📄 package.json                  # Node.js dependencies
+│   ├── 📄 package-lock.json             # Dependency lock file
+│   └── 📄 .env                          # Frontend environment vars
+│
+├── 📂 data/                              # Data storage
+│   ├── 📂 raw/                          # Raw downloaded data
+│   ├── 📂 processed/                    # Processed data
+│   └── 📂 models/                       # Trained ML models
+│
+├── 📂 scripts/                           # Utility scripts
+│   ├── 📄 setup_database.py             # Database initialization
+│   ├── 📄 initial_data_download.py      # Initial data setup
+│   └── 📄 train_models.py               # Model training script
+│
+├── 📂 tests/                             # Test files
+│   ├── 📄 test_api.py                   # API tests
+│   ├── 📄 test_predictions.py           # Prediction tests
+│   └── 📄 test_data_collectors.py       # Data collector tests
+│
+├── 📂 logs/                              # Application logs
+│   └── 📄 trading_app.log               # Main log file
+│
+├── 📄 start_backend.sh                  # Backend startup script (Linux/Mac)
+├── 📄 start_backend.bat                 # Backend startup script (Windows)
+├── 📄 start_frontend.sh                 # Frontend startup script (Linux/Mac)
+├── 📄 start_frontend.bat                # Frontend startup script (Windows)
+├── 📄 start_app.sh                      # Full app startup (Linux/Mac)
+├── 📄 start_app.bat                     # Full app startup (Windows)
+├── 📄 install.sh                        # Installation script (Linux/Mac)
+├── 📄 install.bat                       # Installation script (Windows)
+├── 📄 docker-compose.yml                # Docker setup (optional)
+├── 📄 .gitignore                        # Git ignore rules
+├── 📄 README.md                         # Project documentation
+└── 📄 LICENSE                           # MIT License
